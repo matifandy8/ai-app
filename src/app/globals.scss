@@ -1,3 +1,18 @@
+@mixin font($font-family, $font-file) {
+    @font-face {
+        font-family: $font-family;
+        src: url($font-file) format('ttf'), url($font-file) format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+}
+@include font('Archivo', '/fonts/Archivo_SemiExpanded-Black.ttf');
+
+@font-face {
+    font-family: 'Archivo';
+    src: url('/fonts/Archivo_SemiExpanded-Black.ttf') format('ttf');
+}
+
 :root {
     --max-width: 1100px;
     --border-radius: 12px;

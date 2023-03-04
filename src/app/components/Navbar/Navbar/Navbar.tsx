@@ -13,7 +13,7 @@ const Navbar: React.FC = () => {
     return (
         <header className="navbar">
             <div className="navbar__container">
-                <h1>Logo</h1>
+                <h1>DevCoachAI</h1>
                 <nav className="navbar__menu">
                     <ul className="navbar__menu-list">
                         <li className="navbar__menu-item">

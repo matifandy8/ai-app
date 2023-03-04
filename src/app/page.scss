@@ -1,0 +1,55 @@
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+    font-family: 'Archivo';
+    &__container {
+        margin: 0 auto;
+        padding: 2rem;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        max-width: 60%;
+        background-color: #ffffff;
+    }
+
+    &__title {
+        text-align: left;
+        font-size: 1.5rem;
+        color: #333333;
+        line-height: 1.5;
+        margin: 10px;
+    }
+    &__subtitle {
+        text-align: left;
+        font-size: 1rem;
+        color: #333333;
+        line-height: 1.5;
+        margin: 10px;
+    }
+    &__btn {
+        cursor: pointer;
+        padding: 15px;
+        margin: 10px;
+        background: black;
+        color: #ffffff;
+        border: none;
+        font-family: 'Archivo';
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        &__container {
+            max-width: 85%;
+            margin: 0;
+        }
+        &__title {
+            font-size: 1.2rem;
+        }
+        &__subtitle {
+            font-size: 0.8rem;
+        }
+    }
+}
