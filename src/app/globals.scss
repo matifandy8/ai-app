@@ -7,10 +7,15 @@
     }
 }
 @include font('Archivo', '/fonts/Archivo_SemiExpanded-Black.ttf');
+@include font('Archivo thin', '/fonts/Archivo-Thin.ttf');
 
 @font-face {
     font-family: 'Archivo';
     src: url('/fonts/Archivo_SemiExpanded-Black.ttf') format('ttf');
+}
+@font-face {
+    font-family: 'Archivo thin';
+    src: url('/fonts/Archivo-Thin.ttf') format('ttf');
 }
 
 :root {
