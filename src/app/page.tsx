@@ -1,5 +1,7 @@
 import { Features } from './components/Features'
+import { Testimonial } from './components/Testimonial'
 import './page.scss'
+import testimonialsData from '../../data/testimonials.json'
 
 export default function Home() {
     return (
@@ -19,6 +21,21 @@ export default function Home() {
                 </section>
             </main>
             <Features />
+            <section className="home__testimonials">
+                <h1>Testimonial</h1>
+                <h2>What our users are saying</h2>
+                <div className="home__testimonialList">
+                    {testimonialsData.testimonials.map(testimonial => (
+                        <Testimonial
+                            key={testimonial.id}
+                            quote={testimonial.quote}
+                            author={testimonial.author.name}
+                            title={testimonial.author.title}
+                            image={testimonial.author.image}
+                        />
+                    ))}
+                </div>
+            </section>
         </>
     )
 }

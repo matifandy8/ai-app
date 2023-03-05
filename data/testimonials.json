@@ -1,0 +1,32 @@
+{
+    "testimonials": [
+      {
+        "id": 1,
+        "quote": "DevCoachAI has been an incredible tool for me. The personalized feedback has helped me improve my coding skills tremendously.",
+        "author": {
+          "name": "Jane Doe",
+          "title": "Web Developer",
+          "image": "https://this-person-does-not-exist.com/img/avatar-116838c75965f23e85f4a87515d4fd97.jpg"
+        }
+      },
+      {
+        "id": 2,
+        "quote": "I've been using DevCoachAI for a few weeks now and I'm already seeing improvements in my coding. The code review feature has been especially helpful.",
+        "author": {
+          "name": "John Smith",
+          "title": "Software Engineer",
+          "image": "https://this-person-does-not-exist.com/img/avatar-11b65de05df09dd5720d5594f4629f5b.jpg"
+        }
+      },
+      {
+        "id": 3,
+        "quote": "I love how DevCoachAI provides real-time feedback on my code. It's like having a personal coding coach right there with me!",
+        "author": {
+          "name": "Bob Johnson",
+          "title": "Full-stack Developer",
+          "image": "https://this-person-does-not-exist.com/img/avatar-1116316d7aa1e824f4f6d5ad4ada2f49.jpg"
+        }
+      }
+    ]
+  }
+  

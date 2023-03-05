@@ -4,6 +4,38 @@
     align-items: center;
     height: 100vh;
     font-family: 'Archivo';
+    &__testimonialList {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        justify-content: center;
+    }
+    &__testimonials {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        max-width: 1200px;
+        margin: auto;
+        height: 100vh;
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-family: 'Archivo';
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            font-family: 'Archivo thin';
+            width: 75%;
+            text-align: center;
+            line-height: 1.3;
+        }
+    }
+
     &__container {
         margin: 0 auto;
         padding: 2rem;
