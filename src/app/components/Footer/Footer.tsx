@@ -1,8 +1,5 @@
 import React from 'react'
 import './styles/Footer.scss'
-import Image from 'next/image'
-import github from './public/github.svg'
-import linkedin from './public/linkedin.svg'
 
 const Footer: React.FC = () => {
     return (

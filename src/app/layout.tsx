@@ -1,5 +1,5 @@
-import { Navbar } from './components/Navbar/Navbar'
-import { Footer } from './components/Navbar/Footer'
+import { Footer } from './components/Footer'
+import { Navbar } from './components/Navbar'
 import './globals.scss'
 
 export const metadata = {
