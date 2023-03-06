@@ -1,0 +1,78 @@
+.pricing-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        font-family: 'Archivo';
+    }
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        font-family: 'Archivo thin';
+        width: 75%;
+        text-align: center;
+        line-height: 1.3;
+    }
+    &__list {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+        justify-content: center;
+    }
+    &__card {
+        background-color: #f7f7f7;
+        box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        padding: 2rem;
+        width: 300px;
+
+        &__header {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        &__price {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        &__features {
+            list-style: none;
+            margin-bottom: 1rem;
+
+            &__item {
+                margin-bottom: 0.5rem;
+
+                &:before {
+                    content: '•';
+                    margin-right: 0.5rem;
+                }
+            }
+        }
+
+        &__button {
+            background-color: #0077ff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 0.5rem 1rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: #0061cc;
+            }
+        }
+    }
+}

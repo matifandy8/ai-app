@@ -8,13 +8,13 @@ const Footer: React.FC = () => {
                 <nav className="footer__menu">
                     <ul className="footer__menu-list">
                         <li className="footer__menu-item">
-                            <a href="#">Features</a>
+                            <a href="#features">Features</a>
                         </li>
                         <li className="footer__menu-item">
-                            <a href="#">Testimonials</a>
+                            <a href="#testimonials">Testimonials</a>
                         </li>
                         <li className="footer__menu-item">
-                            <a href="#">Pricing</a>
+                            <a href="#pricing">Pricing</a>
                         </li>
                     </ul>
                 </nav>

@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Features: React.FC = () => {
     return (
-        <div className="features">
+        <div id="features" className="features">
             <h1>Features</h1>
             <h2>
                 DevCoachAI offers a wide range of features to help you improve
