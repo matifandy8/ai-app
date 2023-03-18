@@ -1,8 +1,11 @@
+'use client'
+
 import { Features } from './components/Features'
 import { Testimonial } from './components/Testimonial'
 import './page.scss'
 import testimonialsData from '../../data/testimonials.json'
 import { Pricing } from './components/Pricing'
+import Link from 'next/link'
 
 const plans = [
     {
@@ -48,7 +51,10 @@ export default function Home() {
                         Perfect tool for anyone who wants to take their coding
                         to the next level.
                     </p>
-                    <button className="home__btn">Start now for free</button>
+
+                    <Link className="home__btn" href="/playground" replace>
+                        Start now for free
+                    </Link>
                 </section>
             </main>
             <Features />
