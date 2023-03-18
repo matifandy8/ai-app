@@ -14,11 +14,7 @@ $spacingtwo: 9px;
     height: 6rem;
     background-color: #fff;
     border-bottom: 2px solid;
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    z-index: 999;
     font-family: 'Archivo', sans-serif;
 
     // Hamburger styles
@@ -102,7 +98,7 @@ $spacingtwo: 9px;
                 font-weight: 700;
 
                 &:hover {
-                    color: #0066ff;;
+                    color: #0066ff;
                 }
             }
         }

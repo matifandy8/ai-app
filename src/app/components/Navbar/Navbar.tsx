@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
     }
 
     return (
-        <header className="navbar">
+        <div className="navbar">
             <div className="navbar__container">
                 <h1>DevCoachAI</h1>
                 <nav className="navbar__menu">
@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
                     <span></span>
                 </div>
             </div>
-        </header>
+        </div>
     )
 }
 
