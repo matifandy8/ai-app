@@ -2,7 +2,7 @@
     "testimonials": [
       {
         "id": 1,
-        "quote": "DevCoachAI has been an incredible tool for me. The personalized feedback has helped me improve my coding skills tremendously.",
+        "quote": "DevCoachAI has been an incredible tool for me. The personalized feedback has helped me improve my interviewing skills tremendously.",
         "author": {
           "name": "Jane Doe",
           "title": "Web Developer",
@@ -11,7 +11,7 @@
       },
       {
         "id": 2,
-        "quote": "I've been using DevCoachAI for a few weeks now and I'm already seeing improvements in my coding. The code review feature has been especially helpful.",
+        "quote": "I've been using DevCoachAI for a few weeks now and I'm already seeing improvements in my interviews. The interviewing  skills review feature has been especially helpful.",
         "author": {
           "name": "John Smith",
           "title": "Software Engineer",
@@ -20,7 +20,7 @@
       },
       {
         "id": 3,
-        "quote": "I love how DevCoachAI provides real-time feedback on my code. It's like having a personal coding coach right there with me!",
+        "quote": "I love how DevCoachAI provides real-time feedback on my interviewing skills. It's like having a personal interviewing coach right there with me!",
         "author": {
           "name": "Bob Johnson",
           "title": "Full-stack Developer",

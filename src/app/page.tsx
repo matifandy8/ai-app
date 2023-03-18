@@ -13,7 +13,7 @@ const plans = [
         price: 0,
         features: [
             '1 personalized feedback per week',
-            'Code review',
+            'interviews review',
             'Email support'
         ]
     },
@@ -22,7 +22,7 @@ const plans = [
         price: 9.99,
         features: [
             '3 personalized feedback per week',
-            'Code review',
+            'interviews review',
             'Priority email support'
         ]
     },
@@ -31,7 +31,7 @@ const plans = [
         price: 19.99,
         features: [
             'Unlimited personalized feedback per week',
-            'Code review',
+            'interviews review',
             'Priority email and phone support'
         ]
     }
@@ -43,13 +43,15 @@ export default function Home() {
             <main className="home">
                 <section className="home__container">
                     <h1 className="home__title">
-                        Welcome to DevCoachAI - the AI-owered coding coach
-                        that's always ready to help you improve your coding
-                        skills!
+                        Welcome to DevCoachAI - Level up your technical
+                        interviewing skills. Our platform uses machine learning
+                        algorithms to analyze your interview skills and provide
+                        feedback on how you can improve.
                     </h1>
                     <p className="home__subtitle">
-                        Perfect tool for anyone who wants to take their coding
-                        to the next level.
+                        Perfect tool for anyone who wants to take your interview
+                        skills to the next level and accelerate your career in
+                        tech
                     </p>
 
                     <Link className="home__btn" href="/playground" replace>

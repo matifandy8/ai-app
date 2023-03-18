@@ -8,9 +8,9 @@ const Features: React.FC = () => {
             <h1>Features</h1>
             <h2>
                 DevCoachAI offers a wide range of features to help you improve
-                your coding skills. Our AI-powered coaching platform is designed
-                to help you identify areas where you can improve and provide you
-                with the tools you need to make progress.
+                your interviewing skills. Our AI-powered coaching platform is
+                designed to help you identify areas where you can improve and
+                provide you with the tools you need to make progress.
             </h2>
             <ul>
                 <li>
@@ -23,36 +23,38 @@ const Features: React.FC = () => {
                     <p>
                         <strong>Personalized Feedback:</strong>
                     </p>
-                    Get personalized feedback on your code with specific
-                    suggestions on how to optimize it, along with explanations
-                    of why certain changes are recommended.
+                    Receive personalized coaching from experienced developers
+                    and interviewers who will help you identify your strengths
+                    and weaknesses and provide guidance on how to improve.
                 </li>
                 <li>
                     <Image
                         src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/256/external-analysis-digital-marketing-flatart-icons-outline-flatarticons-1.png"
-                        alt="Real-time Code Analysis"
+                        alt="Real-time feedback"
                         width={100}
                         height={100}
                     />
                     <p>
-                        <strong>Real-time Code Analysis:</strong>
+                        <strong>Real-time feedback:</strong>
                     </p>
-                    Catch mistakes early with real-time code analysis that flags
-                    potential issues as you write code.
+                    Get instant feedback on your performance during mock
+                    interviews, with detailed reports that highlight areas for
+                    improvement.
                 </li>
                 <li>
                     <Image
                         src="https://img.icons8.com/dotty/256/google-code.png"
-                        alt="Code Review"
+                        alt="Career guidance"
                         width={100}
                         height={100}
                     />
                     <p>
-                        <strong>Code Review:</strong>
+                        <strong>Career guidance:</strong>
                     </p>
-                    Receive feedback from experienced developers through our
-                    code review services, helping you learn best practices and
-                    identify areas where you need to improve.
+                    Get career guidance and advice from experienced
+                    professionals, including tips on how to prepare for job
+                    interviews, how to negotiate job offers, and how to navigate
+                    your career as a developer.
                 </li>
                 <li>
                     <Image
@@ -64,9 +66,10 @@ const Features: React.FC = () => {
                     <p>
                         <strong>Learning Resources:</strong>
                     </p>
-                    Access a wide range of learning resources, including online
-                    courses, tutorials, and code samples, to help you learn new
-                    skills and reinforce concepts you've already learned.
+                    Access a range of learning resources, including tutorials,
+                    code samples, and online courses, to help you continue to
+                    develop your technical skills and stay up-to-date with the
+                    latest trends and technologies.
                 </li>
             </ul>
         </div>

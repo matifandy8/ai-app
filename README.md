@@ -1,5 +1,5 @@
 DevCoachAI Landing Page
-This is the official landing page for DevCoachAI, an AI-powered platform that provides personalized coaching to developers. Our platform uses machine learning algorithms to analyze your coding skills and provide feedback on how you can improve. With DevCoachAI, you can take your coding skills to the next level and accelerate your career in tech.
+This is the official landing page for DevCoachAI, an AI-powered platform that provides personalized coaching to developers. Our platform uses machine learning algorithms to analyze your interview skills and provide feedback on how you can improve. With DevCoachAI, you can take your interview skills to the next level and accelerate your career in tech.
 
 ## Getting Started
 
