@@ -21,11 +21,12 @@ const Features: React.FC = () => {
                         height={100}
                     />
                     <p>
-                        <strong>Personalized Feedback:</strong>
+                        <strong>Personalized Interview Question:</strong>
                     </p>
-                    Receive personalized coaching from experienced developers
-                    and interviewers who will help you identify your strengths
-                    and weaknesses and provide guidance on how to improve.
+                    Receive personalized interview for developers who are
+                    looking to improve their interview skills.This feature
+                    allows users to ask questions about a specific technology
+                    and seniority level
                 </li>
                 <li>
                     <Image
