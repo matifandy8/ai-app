@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useState } from 'react'
 import './styles/Navbar.scss'
 
@@ -13,7 +14,9 @@ const Navbar: React.FC = () => {
     return (
         <div className="navbar">
             <div className="navbar__container">
-                <h1>DevCoachAI</h1>
+                <Link href="/" replace>
+                    <h1>DevCoachAI</h1>
+                </Link>
                 <nav className="navbar__menu">
                     <ul className="navbar__menu-list">
                         <li className="navbar__menu-item">

@@ -1,0 +1,76 @@
+.interview {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    &__form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-bottom: 50px;
+        font-family: 'Archivo thin';
+
+        label {
+            select {
+                margin-left: 1rem;
+            }
+        }
+
+        button {
+            align-self: flex-start;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.5rem;
+            background-color: #007bff;
+            color: #fff;
+
+            &:hover {
+                cursor: pointer;
+                background-color: #0069d9;
+            }
+        }
+    }
+    &__select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        height: 40px;
+        padding: 10px 38px 10px 16px;
+        background-size: 10px;
+        transition: border-color 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        &:hover {
+            border: 1px solid #999;
+        }
+        &:focus {
+            border: 1px solid #999;
+            box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.2);
+            outline: none;
+        }
+        /* remove default arrow in IE */
+        select::-ms-expand {
+            display: none;
+        }
+    }
+
+    &__list {
+        margin-top: 2rem;
+        font-family: 'Archivo thin';
+
+        li {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            line-height: 1.5;
+        }
+    }
+}

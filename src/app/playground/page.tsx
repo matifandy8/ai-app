@@ -16,7 +16,7 @@ export default function Playground() {
                     </p>
                     <Link
                         className="feature__btn"
-                        href="/playground/interview-coaching"
+                        href="/playground/interview"
                         replace
                     >
                         Start Interview Coaching

@@ -1,7 +1,11 @@
 .playground {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
 
     &__heading {
         font-size: 2.5rem;
@@ -10,12 +14,15 @@
     }
 
     .features {
+        padding: 0;
+        margin: 0;
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-between;
-
+        gap: 25px;
+        justify-content: center;
         .feature {
-            width: 45%;
+            width: 450px;
             margin-bottom: 40px;
             padding: 20px;
             background-color: #f9f9f9;
