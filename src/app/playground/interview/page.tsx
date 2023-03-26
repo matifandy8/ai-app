@@ -1,12 +1,13 @@
 'use client'
 
+import { fetchQuestionMessage } from '@/app/utils/fetchquestions'
 import { ChangeEventHandler, useState } from 'react'
 import './styles/Interview.scss'
 
 export default function Interview() {
     const [technology, setTechnology] = useState('')
     const [seniority, setSeniority] = useState('')
-    const [questions, setQuestions] = useState([])
+    const [questions, setQuestions] = useState('')
 
     const handleTechnologyChange: ChangeEventHandler<HTMLSelectElement> = e => {
         setTechnology(e.target.value)
@@ -16,11 +17,11 @@ export default function Interview() {
         setSeniority(e.target.value)
     }
 
-    const handleSubmit = (e: React.SyntheticEvent) => {
+    const handleSubmit = async (e: React.SyntheticEvent) => {
         e.preventDefault()
-        // Here you would fetch the questions from your API, based on the selected technology and seniority
-        // You can use the `technology` and `seniority` state variables to construct the API endpoint
-        // Once you receive the questions, update the `questions` state variable with the new value
+        // const message = await fetchQuestionMessage(technology, seniority);
+        // setQuestions(message);
+        setQuestions('hi, this is a test question is not fetching any data?')
     }
 
     return (
@@ -35,6 +36,7 @@ export default function Interview() {
                         onChange={handleTechnologyChange}
                     >
                         <option value="">-- Select technology --</option>
+                        <option value="javascript">Javascript</option>
                         <option value="react">React</option>
                         <option value="angular">Angular</option>
                         <option value="vue">Vue.js</option>
@@ -54,18 +56,19 @@ export default function Interview() {
                         <option value="senior">Senior</option>
                     </select>
                 </label>
-                <button type="submit">Ask questions</button>
+                <button type="submit">Ask me</button>
             </form>
-            <div>
+            <div className="interview__playground">
                 {questions.length === 0 ? (
                     <p>
                         No questions yet. Please select a technology and
                         seniority level and ask for questions.
                     </p>
                 ) : (
-                    <ul>
-                        {/* Here you would map over the questions and create a list item for each one */}
-                    </ul>
+                    <div className="interview__chat">
+                        <div className="interview__question">{questions}</div>
+                        <input type="text" />
+                    </div>
                 )}
             </div>
         </div>

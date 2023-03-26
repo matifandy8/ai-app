@@ -10,6 +10,25 @@
         font-size: 2rem;
         margin-bottom: 1rem;
     }
+    &__playground {
+        max-width: 700px;
+    }
+    &__chat {
+        background: #ddd;
+        margin: 25px auto;
+        box-sizing: border-box;
+        padding: 1em;
+        border-radius: 12px;
+        position: relative;
+        overflow: hidden;
+    }
+    &__question {
+        border: 2px solid #dedede;
+        background-color: #f1f1f1;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px 0;
+    }
 
     &__form {
         display: flex;
