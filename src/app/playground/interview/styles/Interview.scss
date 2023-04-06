@@ -11,9 +11,11 @@
         margin-bottom: 1rem;
     }
     &__playground {
-        max-width: 700px;
+        max-width: 600px;
     }
     &__chat {
+        display: flex;
+        flex-direction: column;
         background: #ddd;
         margin: 25px auto;
         box-sizing: border-box;
@@ -22,7 +24,47 @@
         position: relative;
         overflow: hidden;
     }
-    &__question {
+    &__answer {
+        border: none;
+        border-radius: 3px;
+        font-size: 1em;
+        input {
+            border-radius: 3px;
+            padding: 5px;
+            line-height: 1.5;
+            flex: 1;
+            font-size: 1rem;
+            background: #fafafa;
+            outline: none;
+            border: none;
+            padding: 0 10px;
+        }
+        button {
+            margin: 5px;
+            align-self: flex-start;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 0.5rem;
+            background-color: #007bff;
+            color: #fff;
+
+            &:hover {
+                cursor: pointer;
+                background-color: #0069d9;
+            }
+        }
+    }
+    &__question-msg {
+        width: 70%;
+        border: 2px solid #dedede;
+        background-color: #f1f1f1;
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px 0;
+    }
+    &__answer-msg {
+        align-self: end;
+        width: 70%;
         border: 2px solid #dedede;
         background-color: #f1f1f1;
         border-radius: 5px;
@@ -90,6 +132,14 @@
             margin-bottom: 1rem;
             font-size: 1.2rem;
             line-height: 1.5;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .interview {
+        &__form {
+            flex-direction: column;
         }
     }
 }
