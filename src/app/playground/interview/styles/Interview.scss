@@ -17,18 +17,22 @@
         display: flex;
         flex-direction: column;
         background: #ddd;
-        margin: 25px auto;
+        margin: 5px auto;
         box-sizing: border-box;
         padding: 1em;
         border-radius: 12px;
         position: relative;
-        overflow: hidden;
+        height: 500px;
+        overflow-y: auto;
     }
     &__answer {
         border: none;
-        border-radius: 3px;
+        border-radius: 12px;
         font-size: 1em;
+        padding: 20px;
+        background: #ddd;
         input {
+            width: 85%;
             border-radius: 3px;
             padding: 5px;
             line-height: 1.5;

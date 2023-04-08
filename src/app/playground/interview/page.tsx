@@ -1,23 +1,37 @@
 'use client'
 
 import { fetchQuestionMessage } from '@/app/utils/fetchquestions'
-import { ChangeEventHandler, useState } from 'react'
+import { ChangeEventHandler, useEffect, useRef, useState } from 'react'
 import './styles/Interview.scss'
 
-type Answer = {
+type Chatlog = {
     id: number
-    answer: string
+    type: string
+    msg: string
 }
 
 export default function Interview() {
     const [technology, setTechnology] = useState('')
     const [seniority, setSeniority] = useState('')
-    const [questions, setQuestions] = useState('')
     const [answer, setAnswer] = useState('')
-    const [answers, setAnswers] = useState<Answer[]>([])
+    const [chatLog, setChatLog] = useState<Chatlog[]>([])
+    const chatLogRef = useRef<HTMLDivElement>(null)
+
+    const scrollToBottom = () => {
+        if (chatLogRef.current) {
+            chatLogRef.current.scrollTop = chatLogRef.current.scrollHeight
+        }
+    }
+
+    useEffect(() => {
+        scrollToBottom()
+    }, [chatLog])
 
     const addAnswer = (answer: string) => {
-        setAnswers([...answers, { id: answers.length + 1, answer }])
+        setChatLog([
+            ...chatLog,
+            { id: chatLog.length + 1, type: 'user', msg: answer }
+        ])
     }
 
     const handleTechnologyChange: ChangeEventHandler<HTMLSelectElement> = e => {
@@ -33,16 +47,20 @@ export default function Interview() {
 
     const handleSubmit = async (e: React.SyntheticEvent) => {
         e.preventDefault()
-        // try {
-        //     const message = await fetchQuestionMessage(technology, seniority);
-        //     setCurrentQuestion(message);
-        //   } catch (error) {
-        //     console.error(error);
-        //     // Display error message to user
-        //   }
-        // const message = await fetchQuestionMessage(technology, seniority);
-        // setQuestions(message);
-        setQuestions('hi, this is a test question is not fetching any data?')
+        console.log(chatLog)
+        try {
+            const message = await fetchQuestionMessage(technology, seniority)
+            setChatLog([
+                ...chatLog,
+                { id: chatLog.length + 1, type: 'bot', msg: message }
+            ])
+        } catch (error) {
+            console.error(error)
+        }
+        // setChatLog([
+        //     ...chatLog,
+        //     { id: chatLog.length + 1, type: 'bot', msg: 'hi i am the AI' }
+        // ])
     }
     function handleClick() {
         if (!answer) return
@@ -84,24 +102,27 @@ export default function Interview() {
                 <button type="submit">Ask me</button>
             </form>
             <div className="interview__playground">
-                {questions.length === 0 ? (
+                {chatLog.length === 0 ? (
                     <p>
                         No questions yet. Please select a technology and
                         seniority level and ask for questions.
                     </p>
                 ) : (
-                    <div className="interview__chat">
-                        <div className="interview__question-msg">
-                            {questions}
+                    <div>
+                        <div className="interview__chat" ref={chatLogRef}>
+                            {chatLog?.map(message => (
+                                <div
+                                    className={
+                                        message.type === 'user'
+                                            ? 'interview__answer-msg'
+                                            : 'interview__question-msg'
+                                    }
+                                    key={message.id}
+                                >
+                                    {message.msg}
+                                </div>
+                            ))}
                         </div>
-                        {answers?.map(answer => (
-                            <div
-                                className="interview__answer-msg"
-                                key={answer.id}
-                            >
-                                {answer.answer}
-                            </div>
-                        ))}
                         <div className="interview__answer">
                             <input
                                 type="text"

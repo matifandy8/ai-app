@@ -6,12 +6,12 @@ const fetchQuestionMessage = async (technology: string, seniority: string) => {
         headers: {
             accept: 'application/json',
             'content-type': 'application/json',
-            'X-API-KEY': 'API_KEY'
+            'X-API-KEY': `${API_KEY}`
         },
         body: JSON.stringify({
             enable_google_results: 'true',
             enable_memory: false,
-            input_text: `act as an interviewer for a ${technology} ${seniority} position ask me 1 question and wait for my answer for make other`
+            input_text: `act as an interviewer for a ${technology} ${seniority} position ask me 1 question without introduction and wait for my answer for make other`
         })
     }
 
