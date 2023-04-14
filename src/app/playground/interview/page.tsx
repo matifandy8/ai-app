@@ -14,6 +14,8 @@ export default function Interview() {
     const [technology, setTechnology] = useState('')
     const [seniority, setSeniority] = useState('')
     const [answer, setAnswer] = useState('')
+    const [error, setError] = useState('')
+
     const [chatLog, setChatLog] = useState<Chatlog[]>([])
     const chatLogRef = useRef<HTMLDivElement>(null)
 
@@ -47,20 +49,21 @@ export default function Interview() {
 
     const handleSubmit = async (e: React.SyntheticEvent) => {
         e.preventDefault()
-        console.log(chatLog)
         try {
+            if (!technology || !seniority) {
+                setError('Technology and seniority are required fields')
+                return
+            }
             const message = await fetchQuestionMessage(technology, seniority)
             setChatLog([
                 ...chatLog,
                 { id: chatLog.length + 1, type: 'bot', msg: message }
             ])
+            setError('')
         } catch (error) {
             console.error(error)
+            setError('An error occurred. Please try again later.')
         }
-        // setChatLog([
-        //     ...chatLog,
-        //     { id: chatLog.length + 1, type: 'bot', msg: 'hi i am the AI' }
-        // ])
     }
     function handleClick() {
         if (!answer) return
@@ -101,6 +104,7 @@ export default function Interview() {
                 </label>
                 <button type="submit">Ask me</button>
             </form>
+            {error && <p className="error-message__text">{error}</p>}
             <div className="interview__playground">
                 {chatLog.length === 0 ? (
                     <p>

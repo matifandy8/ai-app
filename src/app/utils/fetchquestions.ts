@@ -15,17 +15,19 @@ const fetchQuestionMessage = async (technology: string, seniority: string) => {
         })
     }
 
-    try {
-        const res = await fetch(
-            'https://api.writesonic.com/v2/business/content/chatsonic?engine=premium',
-            options
+    const res = await fetch(
+        'https://api.writesonic.com/v2/business/content/chatsonic?engine=premium',
+        options
+    )
+
+    if (!res.ok) {
+        throw new Error(
+            `Failed to fetch question message. Status code: ${res.status}`
         )
-        const data = await res.json()
-        return data.message
-    } catch (err) {
-        console.log(err)
-        return ''
     }
+
+    const data = await res.json()
+    return data.message
 }
 
 export { fetchQuestionMessage }
